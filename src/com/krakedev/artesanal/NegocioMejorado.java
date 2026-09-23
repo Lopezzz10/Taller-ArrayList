@@ -3,7 +3,7 @@ package com.krakedev.artesanal;
 import java.util.ArrayList;
 
 public class NegocioMejorado {
-    private ArrayList<Maquina> maquinas;
+    private ArrayList<Maquina> maquinas = new ArrayList<Maquina>();
 
     public ArrayList<Maquina> getMaquinas() {
         return maquinas;
