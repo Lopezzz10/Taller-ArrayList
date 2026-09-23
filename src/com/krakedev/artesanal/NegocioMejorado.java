@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class NegocioMejorado {
     private ArrayList<Maquina> maquinas = new ArrayList<Maquina>();
+    private ArrayList<Cliente> clientes;
+    private int ultimoCodigo = 100;
 
     public ArrayList<Maquina> getMaquinas() {
         return maquinas;
@@ -27,11 +29,13 @@ public class NegocioMejorado {
         maquinas.add(maquina);
         return true;
     }
+
     public void cargarMaquinas() {
         for (Maquina maquina : maquinas) {
             maquina.llenarMaquina();
         }
     }
+
     public Maquina recuperarMaquina(String codigo) {
         for (Maquina maquina : maquinas) {
             if (maquina.getCodigo().equals(codigo)) {
@@ -39,5 +43,12 @@ public class NegocioMejorado {
             }
         }
         return null;
+    }
+
+    public void registrarCliente(String nombre, String cedula) {
+        Cliente cliente = new Cliente(nombre, cedula);
+        cliente.setCodigo(ultimoCodigo);
+        ultimoCodigo++;
+        clientes.add(cliente);
     }
 }
