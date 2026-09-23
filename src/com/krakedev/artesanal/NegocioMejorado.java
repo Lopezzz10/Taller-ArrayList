@@ -23,4 +23,9 @@ public class NegocioMejorado {
         Maquina maquina = new Maquina(codigo, nombreCerveza, descripcion, precioPorML);
         maquinas.add(maquina);
     }
+    public void cargarMaquinas() {
+        for (Maquina maquina : maquinas) {
+            maquina.llenarMaquina();
+        }
+    }
 }
