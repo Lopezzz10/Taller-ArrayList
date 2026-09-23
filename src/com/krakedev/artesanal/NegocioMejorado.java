@@ -71,5 +71,9 @@ public class NegocioMejorado {
         Maquina maquina = recuperarMaquina(codigoMaquina);
         Cliente cliente = buscarClientePorCodigo(codigoCliente);
         double valor = maquina.servirCerveza(cantidad);
+        registrarConsumo(cliente, valor);
+    }
+    public void registrarConsumo(Cliente cliente, double valor) {
+        cliente.setTotalConsumido(cliente.getTotalConsumido() + valor);
     }
 }
