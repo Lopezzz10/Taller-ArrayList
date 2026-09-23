@@ -12,4 +12,9 @@ public class NegocioMejorado {
     public void setMaquinas(ArrayList<Maquina> maquinas) {
         this.maquinas = maquinas;
     }
+
+    public String generarCodigo() {
+        int numero = (int) (Math.random() * 100) + 1;
+        return "M-" + numero;
+    }
 }
