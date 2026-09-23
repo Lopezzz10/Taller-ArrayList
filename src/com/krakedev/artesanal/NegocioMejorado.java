@@ -17,4 +17,10 @@ public class NegocioMejorado {
         int numero = (int) (Math.random() * 100) + 1;
         return "M-" + numero;
     }
+
+    public void agregarMaquina(String nombreCerveza, String descripcion, double precioPorML) {
+        String codigo = generarCodigo();
+        Maquina maquina = new Maquina(codigo, nombreCerveza, descripcion, precioPorML);
+        maquinas.add(maquina);
+    }
 }
