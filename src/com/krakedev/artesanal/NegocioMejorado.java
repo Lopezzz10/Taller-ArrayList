@@ -67,11 +67,15 @@ public class NegocioMejorado {
         }
         return null;
     }
-    public void consumirCerveza(int codigoCliente, String codigoMaquina, double cantidad) {
+    public boolean consumirCerveza(int codigoCliente, String codigoMaquina, double cantidad) {
         Maquina maquina = recuperarMaquina(codigoMaquina);
         Cliente cliente = buscarClientePorCodigo(codigoCliente);
+        if (maquina == null || cliente == null) {
+            return false;
+        }
         double valor = maquina.servirCerveza(cantidad);
         registrarConsumo(cliente, valor);
+        return true;
     }
     
     public void registrarConsumo(Cliente cliente, double valor) {
