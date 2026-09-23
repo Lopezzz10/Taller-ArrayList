@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class NegocioMejorado {
     private ArrayList<Maquina> maquinas = new ArrayList<Maquina>();
-    private ArrayList<Cliente> clientes;
+    private ArrayList<Cliente> clientes = new ArrayList<>();
     private int ultimoCodigo = 100;
 
     public ArrayList<Maquina> getMaquinas() {
