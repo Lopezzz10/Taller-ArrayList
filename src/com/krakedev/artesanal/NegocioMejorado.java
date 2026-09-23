@@ -77,4 +77,11 @@ public class NegocioMejorado {
     public void registrarConsumo(Cliente cliente, double valor) {
         cliente.setTotalConsumido(cliente.getTotalConsumido() + valor);
     }
+    public double consultarValorVendido() {
+        double total = 0;
+        for (Cliente cliente : clientes) {
+            total = total + cliente.getTotalConsumido();
+        }
+        return total;
+    }
 }
