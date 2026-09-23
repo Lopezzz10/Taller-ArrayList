@@ -28,4 +28,12 @@ public class NegocioMejorado {
             maquina.llenarMaquina();
         }
     }
+    public Maquina recuperarMaquina(String codigo) {
+        for (Maquina maquina : maquinas) {
+            if (maquina.getCodigo().equals(codigo)) {
+                return maquina;
+            }
+        }
+        return null;
+    }
 }
