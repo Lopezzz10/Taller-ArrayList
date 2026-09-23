@@ -59,4 +59,12 @@ public class NegocioMejorado {
         }
         return null;
     }
+    public Cliente buscarClientePorCodigo(int codigo) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getCodigo() == codigo) {
+                return cliente;
+            }
+        }
+        return null;
+    }
 }
